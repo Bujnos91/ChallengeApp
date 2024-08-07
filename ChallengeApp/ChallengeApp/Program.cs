@@ -1,5 +1,3 @@
-﻿using System.ComponentModel.Design;
-
 var name = "Marcin";
 var gender = 'M';
 var age = 33;
@@ -20,3 +18,4 @@ else
 { 
     Console.WriteLine(); 
 }
+
