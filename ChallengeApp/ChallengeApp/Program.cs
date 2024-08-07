@@ -1,3 +1,4 @@
+
 ﻿using System.ComponentModel.Design;
 
 var name = "Marcin";
@@ -20,3 +21,4 @@ else
 { 
     Console.WriteLine(); 
 }
+
