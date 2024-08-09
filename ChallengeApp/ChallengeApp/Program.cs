@@ -1,21 +1,43 @@
-var name = "Marcin";
-var gender = 'M';
-var age = 33;
+using ChallengeApp;
 
-if (gender == 'F' && age < 30)
+Employee user1 = new Employee("Marcin", "Bujnowski", 33);
+Employee user2 = new Employee("Marta", "Wojtczak", 26);
+Employee user3 = new Employee("Irena", "Karpiuk", 56);
+
+
+
+user1.AddScore(2);
+user1.AddScore(3);
+user1.AddScore(7);
+user1.AddScore(4);
+user1.AddScore(9);
+
+user2.AddScore(6);
+user2.AddScore(3);
+user2.AddScore(9);
+user2.AddScore(1);
+user2.AddScore(5);
+
+user3.AddScore(1);
+user3.AddScore(6);
+user3.AddScore(8);
+user3.AddScore(3);
+user3.AddScore(2);
+
+List<Employee> users = new List<Employee>()
 {
-    Console.WriteLine("Kobieta ponizej 30 lat");
-}
-else if (name == "Ewa" && age == 30) 
+    user1, user2, user3
+};
+
+int maxResult = -1;
+Employee userWithMaxResult = null;
+foreach (var Employee in users)
 {
-    Console.WriteLine("Ewa lat 30)");
-}
-else if (gender == 'M' && age < 18)
-{
-    Console.WriteLine("Niepelnoletni mezczyzna");
-}
-else
-{ 
-    Console.WriteLine(); 
+    if (Employee.Result > maxResult)
+        userWithMaxResult = Employee;
 }
 
+Console.WriteLine(userWithMaxResult.Name);
+Console.WriteLine(userWithMaxResult.Surname);
+Console.WriteLine("Wiek:  " + userWithMaxResult.Age);
+Console.WriteLine("Wynik:  " +userWithMaxResult.Result);
